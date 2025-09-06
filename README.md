@@ -26,7 +26,6 @@ The project is modularized for clarity, extensibility, and easy adaptation to ot
 │   └── trainer.py         # Training loop (with gradient updates)
 ├── train.py               # Entry point (orchestrates everything)
 ├── run_slurm.sh           # SLURM job script for multi-node execution
-├── requirements.txt       # Python dependencies (TensorFlow + PyTorch)
 └── README.md              # Project documentation
 ```
 
@@ -60,21 +59,6 @@ pip install -r requirements.txt
 - **PyTorch 1.12+**
 - **CUDA 11.8 (or matching cluster version)**
 - **NCCL 2.12+**
-
-### Sample `requirements.txt`
-
-```
-torch>=1.12
-torchvision>=0.13
-tensorflow>=2.11
-numpy
-```
-
-### Cluster Modules (example)
-
-```bash
-module load cuda/11.8 nccl/2.12
-```
 
 ---
 
