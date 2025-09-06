@@ -125,6 +125,7 @@ srun --mpi=none bash -c '
 RANK=$SLURM_PROCID
 WORLD_SIZE=$SLURM_NTASKS
 
+#Set the interface based on your own cluster configuration, the below interfaces are for my own 6-Node Cluster.
 case $RANK in
   0) export NCCL_SOCKET_IFNAME=ens1f1 ;;
   1) export NCCL_SOCKET_IFNAME=ens1f1 ;;
