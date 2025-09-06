@@ -25,7 +25,7 @@ srun --mpi=none bash -c '
 RANK=$SLURM_PROCID
 WORLD_SIZE=$SLURM_NTASKS
 
-# Set Ethernet interface for NCCL
+# Set Ethernet interface for NCCL (These Interfaces are set for our own cluster)
 case $RANK in
   0) export NCCL_SOCKET_IFNAME=ens1f1 ;;       # master-node
   1) export NCCL_SOCKET_IFNAME=ens1f1 ;;       # node01
